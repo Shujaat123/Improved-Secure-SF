@@ -184,28 +184,9 @@ The server-side UMN performs **latent-to-latent translation** using:
 - Payload: **~0.88 MB per query**
 - Supports real-time clinical workflows
 
----
-##  How to Run
- 
-pip install -r requirements.txt
-pip install -e .
-
-python scripts/run_ablation_new_concept.py \
-  --train_dir datasets/PSFH/train \
-  --test_dir datasets/PSFH/test
 
 
 
-## 📂 Repository Structure
-
-```text
-src/privsf/
-├── io/                # Dataset loaders (PSFH, FUMPE, MRI, Nerve)
-├── models/            # Autoencoders, KLT, UMN
-├── runners/           # Baseline & Improved pipelines
-├── mia.py             # Membership inference attack
-├── latency.py         # Runtime & communication profiling
-├── viz.py             # Visualization utilities
 
 
 
