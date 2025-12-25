@@ -31,7 +31,7 @@ from tensorflow.keras.initializers import HeNormal
 from sklearn.manifold import TSNE
 import SimpleITK as sitk
 import matplotlib.pyplot as plt
-os.chdir('/home/saheed_bello/PROJECTS/IMAGE SEGMENTATION')
+
 # -----------------------------
 # Config
 # -----------------------------
@@ -41,8 +41,8 @@ AE_EPOCHS = 100
 MAP_EPOCHS = 200
 BATCH_SIZE = 16
 
-RESULTS_DIR = "./results/full_model_cross"
-MODELS_DIR  = "./saved_models/full_model_cross"
+RESULTS_DIR = "./results/full_model"
+MODELS_DIR  = "./saved_models/full_model"
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)
