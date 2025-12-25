@@ -35,7 +35,6 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 from tensorflow.keras.initializers import HeNormal
 
-os.chdir('/home/saheed_bello/PROJECTS/IMAGE SEGMENTATION')
 # Optional imports per dataset
 try:
     import SimpleITK as sitk
