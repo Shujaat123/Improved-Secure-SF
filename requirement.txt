@@ -1,0 +1,16 @@
+tensorflow>=2.12
+numpy>=1.23
+scikit-learn>=1.2
+matplotlib>=3.7
+SimpleITK>=2.2
+pydicom>=2.4
+scipy>=1.10
+tqdm>=4.65
+Pillow>=10.0
+
+# optional (only for MRI NIfTI utilities)
+nibabel>=5.1
+
+# optional (only if you want PyTorch loaders for nerve/MRI; not required for TF pipeline)
+torch>=2.0
+torchvision>=0.15
