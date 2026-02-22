@@ -11,7 +11,7 @@ The framework extends the original Privacy-SF by introducing:
 
 📄 **Paper**: *Privacy-Preserving Collaborative Medical Image Segmentation Using Latent Transform Networks*  
 📊 **Datasets**: PSFH (Ultrasound), Ultrasound Nerve, FUMPE (CTA), Cardiac MRI  
-🧠 **Framework**: TensorFlow / Keras
+🧠 **Framework**: Pytorch
 
 ---
 
@@ -183,6 +183,7 @@ The server-side UMN performs **latent-to-latent translation** using:
 
 - Payload: **~0.88 MB per query**
 - Supports real-time clinical workflows
+
 
 
 
