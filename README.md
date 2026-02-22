@@ -185,6 +185,47 @@ The server-side UMN performs **latent-to-latent translation** using:
 - Supports real-time clinical workflows
 
 
+## Environment
+
+### Requirements
+- Python 3.9+
+- PyTorch (CUDA optional)
+- numpy
+- scikit-image (optional, for SSIM)
+
+Install (example):
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install numpy scikit-image matplotlib
+
+**To train the framework**
+
+python main_train_stage1.py \
+  --data-train "/path/to/TRAIN_ROOT" \
+  --results-dir "./results/stage1_nc3" \
+  --num-clients 3 \
+  --img-size 256 \
+  --num-classes 3 \
+  --ae-epochs 100 --ae-batch 16 --ae-lr 1e-3 --ae-patience 15 \
+  --umn-epochs 150 --umn-batch 16 --umn-lr 1e-3 --umn-patience 20 \
+  --use-skips 1 --use-klt 1 --use-ppm 1 \
+  --device cuda:0 --seed 42```
+
+ **To run the ablation study**
+
+python ablation_study.py \
+  --train-root "/path/to/TRAIN_ROOT" \
+  --test-root  "/path/to/TEST_ROOT" \
+  --results-dir "./results/clientsweep" \
+  --clients-sweep "1,3,4,5" \
+  --img-size 256 --in-ch 3 --num-classes 3 \
+  --use-skips 1 --use-klt 1 --use-ppm 1 \
+  --ae-epochs 100 --ae-batch 16 --ae-lr 1e-3 --ae-patience 15 \
+  --umn-epochs 150 --umn-batch 16 --umn-lr 1e-3 --umn-patience 20 \
+  --eval-batch 8 \
+  --device cuda:0 --seed 42
+
 
 
 
